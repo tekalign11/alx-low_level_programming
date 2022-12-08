@@ -1,4 +1,3 @@
-#!/bin/bash
 #include <conio. h>
 /*
  * main - print a code using puts
