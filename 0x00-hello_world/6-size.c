@@ -1,22 +1,16 @@
 #include <stdio.h>
 /**
- * main - printing out sizes of datas
- * code by tekalign
+ * main - empty
  * Return: 0
 */
 int main(void)
 {
-	char c
-	int a;
-	long int b;
-	long long int d;
-	float f;
 
-	printf("size of a char: %lu byte(S)\n", (unsigned long)size of(c));
-	printf("size of an int: %lu byte(S)\n", (unsigned long)size of(a));
-	printf("size of a long int: %lu byte(S)\n", (unsigned long)size of(b));
-	printf("size of a long long int: %lu byte(S)\n", (unsigned long)size of(d));
-	printf("size of a float: %lu byte(S)\n", (unsigned long)size of(f));
+	printf("size of a char: %1 byte(S)\n", size of(char));
+	printf("size of an int: %1 byte(S)\n", size of(int));
+	printf("size of a long int: %1 byte(S)\n", size of(long int));
+	printf("size of a long long int: %1 byte(S)\n", size of(long long));
+	printf("size of a float: %1 byte(S)\n", size of(float));
 
 	return (0);
 }
