@@ -1,4 +1,4 @@
-#include <conio. h>
+#include <stdio.h>
 /*
  * main - print a code using puts
  * Return: 0
