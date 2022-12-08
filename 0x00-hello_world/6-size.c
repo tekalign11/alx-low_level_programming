@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 /**
  * main - printing out sizes of datas
  * code by tekalign
@@ -19,4 +19,3 @@ int main(void)
 	printf("size of a float: %lu byte(s)\n", (unsigned long)size of (f));
 	return (0);
 }
-
