@@ -5,7 +5,7 @@
  * Return: Always 0 (siccess)
  */
 int main(void)
-        {
+{
 	int n;
 
 	for (n = 0; n < 10; n++)
@@ -19,4 +19,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-	}
+}
