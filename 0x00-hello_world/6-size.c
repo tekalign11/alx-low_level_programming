@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include <stdio.h>
+'6-size.c' * stderr;
 /**
  * main - Entry
  * Return: Always 0
