@@ -1,26 +1,18 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
+ * main - Prints in lower and upper letters
  * Return: always 0 (success)
  */
 int main(void)
 {
 	char i;
-	char j;
 
-	i = 'a';
-	j = 'b';
-	while
-		(i <= 'z') {
-			putchar(i);
-			i++;
-		}
-	while
-		(j <= 'z') {
-			putchar(j);
-			j++;
-		}
+	for (i = 'a'; i <= 'z'; i++)
+		putchar(i);
+	for (i = 'A'; i <= 'Z'; i++)
+		putchar(i);
+
 	putchar('\n');
 	return (0);
 }
