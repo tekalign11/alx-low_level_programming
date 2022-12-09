@@ -1,6 +1,8 @@
 #include <stdio.h>
+
+
 /**
- * main - Entry
+ * main - Entry point
  * Return: Always 0
 */
 int main(void)
@@ -10,5 +12,6 @@ int main(void)
 	printf("size of a long int: %i byte(S)\n", size of(long int));
 	printf("size of a long long int: %i byte(S)\n", size of(long long));
 	printf("size of a float: %i byte(S)\n", size of(float));
+
 	return (0);
 }
