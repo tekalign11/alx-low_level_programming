@@ -19,16 +19,15 @@ int main(void)
 				{
 					if (c > b)
 					{
-						putchar(a);
-						putchar(b);
-						putchar(c);
-						if (a == 55 && b == 56 && c == 57)
-						{
-							break;
-						}
-
-						putchar(',');
-						putchar(' ');
+					putchar(a);
+					putchar(b);
+					putchar(c);
+					if (a == 55 && b == 56 && c == 57)
+					{
+						break;
+					}
+					putchar(',');
+					putchar(' ');
 					}
 				}
 			}
