@@ -12,7 +12,9 @@ int main(void)
 
 	f = 1;
 	printf("%d ", f);
-	for (f = 2; f <= 100; f++)
+	f = 2;
+	printf("%d ", f);
+	for (f = 3; f <= 100; f++)
 	{
 	if ((f % 3 == 0) && (f % 5 == 0))
 	{
