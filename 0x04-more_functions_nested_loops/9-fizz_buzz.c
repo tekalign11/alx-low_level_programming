@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - Fizz-Buzz test
+ * main - printing numbers
  * Return: Always 0
  */
 
@@ -11,7 +11,7 @@ int main(void)
 	int f;
 
 	for (f = 1; f <= 100; f++)
-	{
+		
 		if ((f % 3 == 0) && (f % 5 == 0))
 		{
 			printf("FizzBuzz ");
@@ -28,7 +28,6 @@ int main(void)
 		{
 			printf("%d ", f);
 		}
-	}
-	printf("\n");
-	return (0);
+		printf("\n");
+		return (0);
 }
