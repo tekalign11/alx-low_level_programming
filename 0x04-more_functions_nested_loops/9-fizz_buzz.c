@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (f == 100)
 		{
-			printf("Buzz ");
+			printf("%s", "Buzz ");
 		}
 		else if ((f % 3 == 0) && (f % 5 == 0))
 		{
