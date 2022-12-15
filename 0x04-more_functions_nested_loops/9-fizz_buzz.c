@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * main - Fizz-Buzz test
@@ -19,7 +20,7 @@ int main(void)
 		}
 		else if (f % 3 == 0)
 		{
-			printf("Fizz");
+			printf("Fizz ");
 		}
 		else if (f % 5 == 0)
 		{
