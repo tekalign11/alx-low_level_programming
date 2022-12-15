@@ -4,7 +4,7 @@
  * @l: number of lines
  * Return: 0
  */
-void print_triangle(int size)
+void print_triangle(int l)
 {
 	int o, p;
 
@@ -13,11 +13,11 @@ void print_triangle(int size)
 		for (p = 1; p < (l - o); p++)
 			_putchar(' ');
 		for (p--; p < l; p++)
-			_putchar();
+			_putchar('#');
 		if (o < (l - 1))
-			_putchar("\n");
+			_putchar('\n');
 	}
-	_putchar("\n");
+	_putchar('\n');
 }
 
 
