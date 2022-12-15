@@ -2,7 +2,6 @@
 #include <stdio.h>
 /**
  * main - Fizz-Buzz test
- * @f: the intiger
  * Return: Always 0
  */
 
