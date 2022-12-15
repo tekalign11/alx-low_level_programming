@@ -10,10 +10,6 @@ int main(void)
 {
 	int f;
 
-	f = 1;
-	printf("%d ", f);
-	f = 2;
-	printf("%d ", f);
 	for (f = 3; f <= 100; f++)
 	{
 	if ((f % 3 == 0) && (f % 5 == 0))
@@ -33,6 +29,6 @@ int main(void)
 	printf("%d ", f);
 	}
 	}
-	printf("\n");
-	return (0);
+printf("\n");
+return (0);
 }
