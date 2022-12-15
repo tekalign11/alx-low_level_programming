@@ -10,8 +10,10 @@ int main(void)
 {
 	int f;
 
-	f = 1;
-	printf("%d", f);
+	if (f == 1)
+	{
+		printf("%d", f);
+	}
 	for (f = 2; f <= 100; f++)
 	{
 		if ((f % 3 == 0) && (f % 5 == 0))
