@@ -10,7 +10,6 @@ int main(void)
 {
 	int f;
 
-	f = 1;
 	for (f = 1; f <= 100; f++)
 	{
 		if ((f % 3 == 0) && (f % 5 == 0))
