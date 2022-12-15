@@ -14,7 +14,7 @@ void print_square(int s)
 	{
 		for (b = 0; b < s; b++)
 		{
-			_putchar(96);
+			_putchar(35);
 		}
 		if (a != s - 1)
 			_putchar('\n');
