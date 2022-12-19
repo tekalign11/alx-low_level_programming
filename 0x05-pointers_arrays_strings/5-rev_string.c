@@ -5,18 +5,18 @@
  */
 void rev_string(char *s)
 {
-	int l, m, n, nurse;
+	int l, m, n, temp;
 
 	l = 0;
 	while (s[l] != '\0')
 		l++;
 	n = 0;
 	m = l - 1;
-	while (m < n)
+	while (n < m)
 	{
-		nurse = s[n];
+		temp = s[n];
 		s[n] = s[m];
-		s[m] = nurse;
+		s[m] = temp;
 		n++;
 		m--;
 	}
