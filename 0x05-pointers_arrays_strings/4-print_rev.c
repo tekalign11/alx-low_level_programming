@@ -9,9 +9,9 @@ void print_rev(char *s)
 {
 	int nurse;
 
-	for (nurse = 0; s[nurse] != '\n'; nurse++)
+	for (nurse = 0; s[nurse] != '\0'; nurse++)
 		;
-	for (nurse = nurse - 1; s[nurse] != '\n'; nurse--)
+	for (nurse = nurse - 1; s[nurse] != '\0'; nurse--)
 		putchar(s[nurse]);
 	putchar('\n');
 }
