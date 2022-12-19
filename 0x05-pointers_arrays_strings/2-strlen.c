@@ -10,7 +10,7 @@ int _strlen(char *s)
 {
 	int nurse;
 
-	for (nurse = 0; s[nurse] != '\0' : nurse++)
+	for (nurse = 0; s[nurse] != '\0' ; nurse++)
 		;
 	return (nurse);
 }
