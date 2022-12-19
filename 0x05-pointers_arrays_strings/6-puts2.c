@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * puts_half - prints half of a string, followed by a new line.
+ * puts2 - prints every other character of a string
  * @str: half ot the string to be printed
- *Return: void
+ * Return: void
  */
-void puts_half(char *str)
+void puts2(char *str)
 {
 	int t;
 
