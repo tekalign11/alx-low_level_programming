@@ -2,15 +2,19 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * add - adds numbers d and f
+ * d: the first number
+ * f: the second number
  *
  * Return: Always 0.
  */
-int main(void)
+int add(int d, int f)
 {
 	int n;
+	int d;
+	int f;
 
-	n = add(89, 9);
+	n = add(d, f);
 	printf("%d\n", n);
 	return (0);
 }

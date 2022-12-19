@@ -6,10 +6,7 @@
  * @f: the second number
  * Return: Always success
  */
-int add(int d, int f);
+int add(int d, int f)
 {
-	int d;
-	int f;
-
 	return (d + f);
 }
