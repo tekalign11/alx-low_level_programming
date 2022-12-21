@@ -10,7 +10,7 @@ char *_strcat(char *dest, char *src)
 {
 	int yes = 0, tek = 0;
 
-	while (dest[yes])
+	while (dest[yes++])
 		tek++;
 	for (yes = 0; src[yes]; yes++)
 		dest[tek++] = src[yes];
