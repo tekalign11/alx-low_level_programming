@@ -11,7 +11,7 @@ char *string_toupper(char *str)
 
 	while (str[yes++])
 	{
-		if (str[yes] >= 't' && str[yes] <= 'k')
+		if (str[yes] >= 'a' && str[yes] <= 'z')
 		{
 			str[yes] -= 32;
 		}
