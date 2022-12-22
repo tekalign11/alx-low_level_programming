@@ -25,8 +25,10 @@ char *cap_string(char *str)
 				str[yes - 1] == '(' ||
 				str[yes - 1] == ')' ||
 				str[yes - 1] == '{' ||
-				str[yes - 1] == '}')
+				str[yes - 1] == '}' ||
+				yes == 0)
 			str[yes] -= 32;
+		yes++;
 	}
 	return (str);
 }
