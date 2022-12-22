@@ -9,7 +9,7 @@ char *cap_string(char *str)
 {
 	int yes = 0;
 
-	while (str[++yes])
+	while (str[yes])
 	{
 		while (!(str[yes] >= 'a' && str[yes] <= 'z'))
 			yes++;
