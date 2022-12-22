@@ -14,6 +14,6 @@ void print_number(int n)
 	}
 	if ((kutir / 10) > 0)
 		print_number(kutir / 10);
-	putchar((kutir % 10) + '0');
+	_putchar((kutir % 10) + '0');
 }
 
