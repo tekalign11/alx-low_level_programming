@@ -10,7 +10,7 @@ char *leet(char *str)
 	int yes1 = 0, yes2;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (str[++yes1])
+	while (str[yes1])
 	{
 		for (yes2 = 0; yes2 <= 7; yes2++)
 		{
@@ -20,6 +20,7 @@ char *leet(char *str)
 				str[yes1] = yes2 + '0';
 			}
 		}
+		yes1++;
 	}
 	return (str);
 }
