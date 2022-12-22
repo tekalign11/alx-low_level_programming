@@ -24,6 +24,7 @@ char *rot13(char *str)
 								'd', 'e', 'f', 'g', 'h', 'i',
 								'j', 'k', 'l', 'm'};
 	while (str[++yes1])
+	{
 		for (yes2 = 0; yes2 < 52; yes2++)
 		{
 			if (str[yes1] == alphabet[yes2])
@@ -32,5 +33,7 @@ char *rot13(char *str)
 				break;
 			}
 		}
+		yes1++;
+	}
 	return (str);
 }
