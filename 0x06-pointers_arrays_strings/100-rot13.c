@@ -10,10 +10,10 @@ char *rot13(char *str)
 	int yes1, yes2;
 
 	char alphabet[52] = {'A', 'B', 'C', 'D', 'F',
-					'G', 'H', 'I', 'J', 'K', 'L',
-					'M', 'N', 'O', 'P', 'Q', 'R',
-					'S', 'T', 'U', 'V', 'W', 'X',
-					'Y', 'Z'};
+		'G', 'H', 'I', 'J', 'K',
+		'L', 'M', 'N', 'O', 'P',
+		'Q', 'R', 'S', 'T', 'U',
+		'V', 'W', 'X', 'Y', 'Z'};
 	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
 								'T', 'U', 'V', 'W', 'X', 'Y',
 								'Z', 'A', 'B', 'C', 'D', 'E',
