@@ -9,11 +9,11 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		kutir = -kutir;
 	}
 	if ((kutir / 10) > 0)
 		print_number(kutir / 10);
-	_putchar((kutir % 10) + '0');
+	putchar((kutir % 10) + '0');
 }
 
