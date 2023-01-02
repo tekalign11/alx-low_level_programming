@@ -13,7 +13,8 @@ void print_chessboard(char (*a)[8])
 		for (teka2 = 0; teka2 < 8; teka2++)
 		{
 			_putchar(a[teka1][teka2]);
-			_putchar('\n');
+
+		_putchar('\n');
 		}
 	}
 }
