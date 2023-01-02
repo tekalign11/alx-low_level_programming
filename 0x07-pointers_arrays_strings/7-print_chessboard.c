@@ -6,15 +6,16 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	int teka1, teka2;
+	unsigned int i, t = 0;
 
-	for (teka1 = 0; a[teka1][7]; teka1++)
+	for (i = 0; i < 64; i++)
 	{
-		for (teka2 = 0; teka2 < 8; teka2++)
+		if (i % 8 == 0 && i != 0)
 		{
-			_putchar(a[teka1][teka2]);
-
-		_putchar('\n');
+			t = i;
+			_putchar('\n');
 		}
+		_putchar(a[i / 8][i - t]);
 	}
+	_putchar('\n');
 }
