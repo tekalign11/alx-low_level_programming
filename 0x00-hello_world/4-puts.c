@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main: Prints the intended sentence
- * Return: Always 0
+ * main: Entry point
+ * Description: this function prints a sentence using puts
+ * Return: Always 0(success)
  */
 int main(void)
 {

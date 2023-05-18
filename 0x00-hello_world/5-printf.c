@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main: prints a snetence
- * Return: Always 0
+ * main: Entry point
+ * Description: prints a snetence using printf
+ * Return: Always 0(success)
  */
 int main(void)
 {
