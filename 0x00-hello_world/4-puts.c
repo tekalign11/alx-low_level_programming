@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
+ * main - Entry point
  * Description: this function prints a sentence using puts
  * Return: Always 0(success)
  */
