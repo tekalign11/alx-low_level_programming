@@ -22,11 +22,8 @@ int main(void)
 					putchar(32);
 					putchar(48 + k);
 					putchar(48 + l);
-					if (l < 9)
-					{
-						putchar(44);
-						putchar(32);
-					}
+					putchar(44);
+					putchar(32);
 				}
 	putchar('\n');
 	return (0);
