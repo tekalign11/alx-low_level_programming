@@ -12,8 +12,9 @@ int main(void)
 	while (n < 91)
 		putchar(n);
 		n++;
-	for (n = 97; n < 123; n++)
+	while (n > 97 & n < 123)
 		putchar(n);
+		n++;
 	putchar('\n');
 	return (0);
 }
