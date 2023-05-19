@@ -1,13 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
-/*
- * main - print number type
- * Description: Prints if number is zero positive or nega
- * Return: Always success (0)
+/**
+ * main - the main function that return nothing
+ * description: Prints if the random number is zero positive or negative
+ * Return: Always 0
 */
-
 int main(void)
 {
 	int n;
