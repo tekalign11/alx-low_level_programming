@@ -1,17 +1,18 @@
 #include <stdio.h>
-
 /**
  * main - entry point
- * description: prints single digit base 10 nums
- * Return: 0
+ * Description: Prints single digit base 10 nums
+ * Return: Always sucess (0)
  */
 int main(void)
 {
 	int n = 0;
 
 	while (n < 10)
-		putchar(n);
+	{
+		putchar(n + '0');
 		n++;
+	}
 	putchar('\n');
 	return (0);
 }
