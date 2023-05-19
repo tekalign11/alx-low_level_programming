@@ -14,7 +14,7 @@ int main(void)
 		putchar(48 + n);
 		n++;
 	}
-	for (n = 10; n < 1666666; n++)
+	for (n = 10; n < 16; n++)
 	{
 		putchar(87 + n);
 	}
