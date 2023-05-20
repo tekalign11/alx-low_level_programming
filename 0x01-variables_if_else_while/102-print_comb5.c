@@ -17,7 +17,7 @@ int main(void)
 			for (o = 0; o < 10; o++)
 				for (p = 1; p < 10; p++)
 				{
-					if ((m <= o) | ((m == o) & (n < p)))
+					if ((m < o) || ((m = o) & (n < p)))
 					{
 						putchar(48 + m);
 						putchar(48 + n);
