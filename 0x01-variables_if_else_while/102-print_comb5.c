@@ -15,9 +15,9 @@ int main(void)
 	for (m = 0; m < 10; m++)
 		for (n = 0; n < 9; n++)
 			for (o = 0; o < 10; o++)
-				for (p = 1; p < 10; p++)
+				for (p = 0; p < 10; p++)
 				{
-					if ((m < o) || ((m == o) && (n < p)))
+					if ((m < o) | ((m == o) & (n < p)))
 					{
 						putchar(48 + m);
 						putchar(48 + n);
