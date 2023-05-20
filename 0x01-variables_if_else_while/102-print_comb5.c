@@ -16,6 +16,7 @@ int main(void)
 		for (n = 0; n < 9; n++)
 			for (o = 0; o < 10; o++)
 				for (p = 0; p < 10; p++)
+				{
 					if ((m < o) | ((m == o) & (n < p)))
 					{
 						putchar(48 + m);
@@ -23,10 +24,13 @@ int main(void)
 						putchar(32);
 						putchar(48 + o);
 						putchar(48 + p);
-					if (!((m == 9) & (n == 8)))
-						putchar(44);
-						putchar(32);
+						if (!((m == 9) & (n == 8)))
+						{
+							putchar(44);
+							putchar(32);
+						}
 					}
+				}
 	putchar('\n');
 	return (0);
 }
