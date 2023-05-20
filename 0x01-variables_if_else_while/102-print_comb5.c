@@ -7,23 +7,23 @@
  */
 int main(void)
 {
-	int i;
-	int j;
-	int k;
-	int l;
+	int m;
+	int n;
+	int o;
+	int p;
 
-	for (i = 0; i < 10; i++)
-		for (j = 0; j < 9; j++)
-			for (k = 0; k < 10; k++)
-				for (l = 1; l < 10; l++)
+	for (m = 0; m < 10; m++)
+		for (n = 0; n < 9; n++)
+			for (o = 0; o < 10; o++)
+				for (p = 1; p < 10; p++)
 				{
-					if (j < l)
+					if (n <= p)
 					{
-						putchar(48 + i);
-						putchar(48 + j);
+						putchar(48 + m);
+						putchar(48 + n);
 						putchar(32);
-						putchar(48 + k);
-						putchar(48 + l);
+						putchar(48 + o);
+						putchar(48 + p);
 						putchar(44);
 						putchar(32);
 					}
