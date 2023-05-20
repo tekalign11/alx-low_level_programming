@@ -17,16 +17,17 @@ int main(void)
 			for (o = 0; o < 10; o++)
 				for (p = 1; p < 10; p++)
 				{
-					if ((m <= o) & (n < p))
-					{
-						putchar(48 + m);
-						putchar(48 + n);
-						putchar(32);
-						putchar(48 + o);
-						putchar(48 + p);
-						putchar(44);
-						putchar(32);
-					}
+					if (m <= o)
+						if ((m = o) & (n < p))
+						{
+							putchar(48 + m);
+							putchar(48 + n);
+							putchar(32);
+							putchar(48 + o);
+							putchar(48 + p);
+							putchar(44);
+							putchar(32);
+						}
 				}
 	putchar('\n');
 	return (0);
