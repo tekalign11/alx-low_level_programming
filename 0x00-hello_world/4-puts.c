@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * Description: this function prints a sentence using puts
- * Return: Always 0(success)
+ * return: Always 0(success)
  */
 int main(void)
 {
