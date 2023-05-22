@@ -9,28 +9,23 @@ int main(void)
 {
 	int m;
 	int n;
-	int o;
-	int p;
-
-	for (m = 0; m < 10; m++)
-		for (n = 0; n < 10; n++)
-			for (o = 0; o < 10; o++)
-				for (p = 0; p < 10; p++)
+	
+	for (m = 0; m < 100; m++)
+		for (n = m + 1; n < 100; n++)
+			{
 				{
-					if ((m < o) | ((m == o) & (n < p)))
+					putchar((m / 10) + 48);
+					putchar((m % 10) + 48);
+					putchar(32);
+					putchar((n / 10) + 48);
+					putchar((n % 10) + 48);
+					if (!((m == 98) & (n == 99)))
 					{
-						putchar(48 + m);
-						putchar(48 + n);
+						putchar(44);
 						putchar(32);
-						putchar(48 + o);
-						putchar(48 + p);
-						if (!((m == 9) & (n == 8)))
-						{
-							putchar(44);
-							putchar(32);
-						}
 					}
 				}
+			}
 	putchar('\n');
 	return (0);
 }
