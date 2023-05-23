@@ -3,7 +3,7 @@
 
 /**
  * print_alphabet_x10 - prints the alphabet in lower case
- * Description: prints the alphabet 10 times in lowercase
+ * Description:i prints the alphabet 10 times in lowercase
  *
  * Return: Always success (0)
  */
@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 
 	for (k = 0; k < 10; k++)
 	{
-		for (l = 97; k < 123; k++)
+		for (l = 97; l < 123; l++)
 		{
 			putchar(l);
 		}
