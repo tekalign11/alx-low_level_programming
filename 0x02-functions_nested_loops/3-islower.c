@@ -3,9 +3,10 @@
 
 /**
  * _islower - checks for lower case character
- * @c:The character to be checked
- * The fucntion checkes for characters and returns 1 or 0
- * Return : 1 if the character is lower case else 0
+ * @c: The character to be checked
+ * Description: The fucntion checkes for characters and returns 1 or 0
+ * Return : Returns 1 if c is lowercase else 0
+ * Return: Always success (0)
  */
 int _islower(int c)
 {
