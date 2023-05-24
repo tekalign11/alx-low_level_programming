@@ -7,21 +7,16 @@
  */
 int main(void)
 {
-	int n;
-	int m;
+	int n1 = 0, n2 = 1;
+	int i, n3;
 
-	for (n = 0; n < 50; n++)
+	printf("%d, %d, ", n1, n2);
+	for (i = 3; i < 50; i++)
 	{
-		if (n < 2)
-		{
-			printf("1, ");
-		}
-		if (n >= 2)
-			for (m = 0; m < 48; m++)
-			{
-				n = m + n;
-				printf("%d, ", n);
-			}
+		printf("%d, ", n3);
+		n2 = n1;
+		n3 = n2;
+		n3 = n1 + n2;
 	}
 	return (0);
 }
