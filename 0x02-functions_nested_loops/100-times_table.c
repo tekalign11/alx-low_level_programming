@@ -18,7 +18,7 @@ void print_times_table(int n)
 			for (l = 0; l <= n; l++)
 			{
 				printf("%d", k * l);
-				if (k != l)
+				if (k == n)
 					printf(",");
 				if ((k * (l + 1)) > 100)
 					printf(" ");
