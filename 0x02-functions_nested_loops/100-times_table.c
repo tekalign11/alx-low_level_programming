@@ -18,14 +18,14 @@ void print_times_table(int n)
 			for (l = 0; l <= n; l++)
 			{
 				printf("%d", k * l);
-				if (k == n)
+				if (l != n)
 					printf(",");
-				if ((k * (l + 1)) > 100)
+				if ((k * (l + 1)) >= 100)
 					printf(" ");
-				else if (((k * (l + 1)) < 100) && ((k * (l + 1)) > 9))
-					printf("  ");
-				else
+				else if ((k *(l + 1)) < 10)
 					printf("   ");
+				else
+					printf("  ");
 			}
 			printf("\n");
 		}
