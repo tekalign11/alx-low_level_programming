@@ -13,8 +13,8 @@ void print_times_table(int n)
 
 	if ((n >= 0) && (n < 16))
 	{
-		for (k = 0; k < n; k++)
-			for (l = 0; l < n; l++)
+		for (k = 0; k <= n; k++)
+			for (l = 0; l <= n; l++)
 			{
 				printf("%d", k * l);
 				if (k != l)
