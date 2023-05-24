@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	int n, m;
-	int sum = 0;
+	int n;
+	int m = 0;
 
-	for (n = 1; n < 51; n++)
+	for (n = 1; n < 50; n += m)
 	{
-		sum = sum + n;
-		printf("%d, ", sum);
+		printf("%d, ", n); 
+		m = n +  m;
 	}
 	return (0);
 }
