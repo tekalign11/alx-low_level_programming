@@ -14,6 +14,7 @@ void print_times_table(int n)
 	if ((n >= 0) && (n < 16))
 	{
 		for (k = 0; k <= n; k++)
+		{
 			for (l = 0; l <= n; l++)
 			{
 				printf("%d", k * l);
@@ -24,6 +25,7 @@ void print_times_table(int n)
 				else if ((k * (l + 1)) < 10)
 					printf("   ");
 			}
-		printf("\n");
+			printf("\n");
+		}
 	}
 }
