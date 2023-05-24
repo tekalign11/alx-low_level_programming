@@ -9,14 +9,13 @@
  */
 void print_to_98(int n)
 {
-	for (; n > 97; n--)
-	{
-		printf("%d, ", n);
-	}
-	printf("\n");
-	for (; n < 99; n ++)
-	{
-		printf("%d, ", n);
-	}
-	printf("\n");
+	int i;
+
+	if (n > 97)
+		for (i = n; n > 97; i--)
+			printf("%d, \n", i);
+	else if (n < 99)
+		for (i = n; n < 99; i++)
+			printf("%d, \n", i);
+	
 }
