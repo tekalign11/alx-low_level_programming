@@ -19,13 +19,15 @@ void print_times_table(int n)
 			{
 				printf("%d", k * l);
 				if (l != n)
+				{
 					printf(",");
-				if ((k * (l + 1)) >= 100)
-					printf(" ");
-				else if ((k *(l + 1)) < 10)
-					printf("   ");
-				else
-					printf("  ");
+					if ((k * (l + 1)) >= 100)
+						printf(" ");
+					else if ((k *(l + 1)) < 10)
+						printf("   ");
+					else
+						printf("  ");
+				}
 			}
 			printf("\n");
 		}
