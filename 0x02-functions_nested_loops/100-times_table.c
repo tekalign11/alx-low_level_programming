@@ -9,20 +9,21 @@
  */ 
 void print_times_table(int n)
 {
-	int k;
+	int k, l;
 
-	for (n = 0; n < 16; n++)
+	if ((n >= 0) && (n < 16))
 	{
 		for (k = 0; k < 16; k++)
-		{
-			printf("%d", n * k);
-			if (k != n)
-				printf(",");
-			if ((n * (k + 1)) > 9)
-                                printf("  ");
-                        else if ((n * (k + 1)) < 10)
-                                printf("   ");
-		}
-                printf("\n");
+			for (l = 0; l < 16; l++)
+			{
+				printf("%d", n * k);
+				if (k != n)
+					printf(",");
+				if ((n * (k + 1)) > 9)
+                        	        printf("  ");
+				else if ((n * (k + 1)) < 10)
+                                	printf("   ");
+			}
+		printf("\n");
 	}
 }
