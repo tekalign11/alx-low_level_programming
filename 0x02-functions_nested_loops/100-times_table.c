@@ -6,7 +6,7 @@
  * @n: the number determining the time table
  * Description: prints time table of n starting with 0
  * Return: Always success (0)
- */ 
+ */
 void print_times_table(int n)
 {
 	int k, l;
@@ -16,13 +16,13 @@ void print_times_table(int n)
 		for (k = 0; k < 16; k++)
 			for (l = 0; l < 16; l++)
 			{
-				printf("%d", n * k);
-				if (k != n)
+				printf("%d", k * l);
+				if (k != l)
 					printf(",");
-				if ((n * (k + 1)) > 9)
-                        	        printf("  ");
-				else if ((n * (k + 1)) < 10)
-                                	printf("   ");
+				if ((k * (l + 1)) > 9)
+					printf("  ");
+				else if ((k * (l + 1)) < 10)
+					printf("   ");
 			}
 		printf("\n");
 	}
