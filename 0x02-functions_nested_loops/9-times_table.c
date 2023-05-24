@@ -22,6 +22,6 @@ void times_table(void)
 			else if ((k * (l + 1)) < 10)
 				printf("  ");
 		}
-	printf("\n");
+		printf("\n");
 	}
 }
