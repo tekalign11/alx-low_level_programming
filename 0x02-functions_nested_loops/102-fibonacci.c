@@ -8,12 +8,20 @@
 int main(void)
 {
 	int n;
-	int m = 0;
+	int m;
 
-	for (n = 1; n < 50; n += m)
+	for (n = 0; n < 50; n++)
 	{
-		printf("%d, ", n); 
-		m = n +  m;
+		if (n < 2)
+		{
+			printf("1, ");
+		}
+		if (n >= 2)
+			for (m = 0; m < 48; m++)
+			{
+				n = m + n;
+				printf("%d, ", n);
+			}
 	}
 	return (0);
 }
