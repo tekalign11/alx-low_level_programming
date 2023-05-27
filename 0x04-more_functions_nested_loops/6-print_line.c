@@ -15,14 +15,13 @@ void print_line(int n)
 		{
 			_putchar('\n');
 		}
-		else if (n > 0)
+		else if (n < 0)
 		{
-			k = n;
+			k = -n;
 			_putchar(95);
 		}
 		else
 		{
-			k = -n;
 			_putchar(95);
 		}
 	}
