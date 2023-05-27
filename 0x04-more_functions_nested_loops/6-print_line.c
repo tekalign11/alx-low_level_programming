@@ -17,6 +17,7 @@ void print_line(int n)
 		}
 		else if (k > 0)
 		{
+			k = n;
 			_putchar(95);
 		}
 		else
