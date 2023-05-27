@@ -18,11 +18,11 @@ void print_line(int n)
 		else if (n < 0)
 		{
 			k = -n;
-			_putchar(95);
+			_putchar('_');
 		}
 		else
 		{
-			_putchar(95);
+			_putchar('_');
 		}
 	}
 	_putchar('\n');
