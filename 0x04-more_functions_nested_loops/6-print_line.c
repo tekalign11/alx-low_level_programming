@@ -7,9 +7,9 @@
  */
 void print_line(int n)
 {
-	int k;
+	int k = 1;
 
-	for (; k <= n; k++)
+	while (k <= n)
 	{
 		if (n == 0)
 		{
@@ -24,6 +24,7 @@ void print_line(int n)
 		{
 			_putchar('_');
 		}
+		k++;
 	}
 	_putchar('\n');
 }
