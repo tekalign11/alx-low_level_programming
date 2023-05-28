@@ -12,12 +12,12 @@ int main(void)
 	for (t = 1; t <= 100; t++)
 	{
 		if (t % 3 == 0 && t % 5 == 0)
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 		else if (t % 5 == 0)
 		{
 			if (t < 100)
 				printf("Buzz ");
-			else
+			else if (t == 100)
 				printf("Buzz");
 		}
 		else if (t % 3 == 0)
