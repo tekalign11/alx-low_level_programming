@@ -14,13 +14,16 @@ int main(void)
 		if (t % 3 == 0 && t % 5 == 0)
 			printf("FizzBuzz");
 		else if (t % 5 == 0)
-			printf("Buzz");
+		{
+			if (t < 100)
+				printf("Buzz ");
+			else
+				printf("Buzz");
+		}
 		else if (t % 3 == 0)
-			printf("Fizz");
-		else if (t < 100)
-			printf("\n");
+			printf("Fizz ");
 		else
-			printf("%d", t);
+			printf("%d ", t);
 	}
 	printf("\n");
 	return (0);
