@@ -7,22 +7,26 @@
 void puts_half(char *str)
 {
 	int j;
-	int i = strlen(str);
+	int i = 0;
 
+	while (str[i] != 0)
+	{
+		i++;
+	}
 	if (i % 2 == 0)
 	{
 		for (j = i / 2; j <= i - 1; j++)
 		{
-			printf("%c", str[j]);
+			_putchar(str[j]);
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 	else
 	{
 		for (j = i / 2 + 1; j <= i - 1; j++)
 		{
-			printf("%c", str[j]);
+			_putchar(str[j]);
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
