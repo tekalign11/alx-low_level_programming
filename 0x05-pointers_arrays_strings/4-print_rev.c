@@ -17,7 +17,7 @@ void print_rev(char *s)
 	}
 	for (i = t - 1; i >= 0; i--)
 	{
-		_putchar(s[i] + '0');
+		_putchar(s[i]);
 	}
 	printf("\n");
 }
