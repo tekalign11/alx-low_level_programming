@@ -9,11 +9,15 @@
 void print_rev(char *s)
 {
 	int i;
-	int t = strlen(s);
+	int t = 0;
 
+	while (s[t] != '\0')
+	{
+		t++;
+	}
 	for (i = t - 1; i >= 0; i--)
 	{
-		printf("%c", s[i]);
+		_putchar(s[i] + '0');
 	}
 	printf("\n");
 }
