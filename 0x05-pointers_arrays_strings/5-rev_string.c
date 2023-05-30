@@ -7,7 +7,11 @@
  */
 void rev_string(char *s)
 {
-	int n;
-	
-	strrev(s);
+	int i = strlen(s);
+	char j;
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		printf("%c\n", s[j]);
+	}
 }
