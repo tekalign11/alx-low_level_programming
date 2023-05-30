@@ -7,11 +7,12 @@
  */
 void rev_string(char *s)
 {
-	char i = strlen(s);
 	int j;
+	char i = strlen(s);
 
 	for (j = i - 1; j >= 0; j--)
 	{
 		printf("%c", s[j]);
 	}
+	printf("\n");
 }
