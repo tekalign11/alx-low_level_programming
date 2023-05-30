@@ -10,7 +10,6 @@
  */
 void _puts(char *str)
 {
-	char t[]= "I do not fear computers. I fear the lack of them - Isaac Asimov";
-
-	_puts(t);
+       
+	_puts("I do not fear computers. I fear the lack of them - Isaac Asimov\n");
 }
