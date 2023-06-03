@@ -1,14 +1,24 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Entry point
+ * main - Prints a single character
  *
- * this function prints a string
+ * This function prints a single character
  *
  * Return: Always success (0)
  */
 int main(void)
 {
-	printf("_putchar\n");
+
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
 	return (0);
 }
