@@ -1,13 +1,12 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "main.h"
 /**
- * _putchar - Prints a single character
+ * main - Entry point
  *
- * @c: The character to be printed
+ * This function prints a single character at a time
  *
  * Return: Always success (0)
  */
-int _putchar(char c)
+int main(void)
 {
 
 	_putchar('_');
