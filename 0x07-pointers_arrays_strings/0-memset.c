@@ -7,6 +7,7 @@
  * @s: Pointer pointing to a string
  *
  * @b: The constant
+ * @n: The size
  *
  * Return: Pointer to the memory area of s
  */
