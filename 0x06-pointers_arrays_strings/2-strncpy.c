@@ -17,11 +17,10 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		tek++;
 	}
-	while (j < n && j <= tek)
+	while ((j <= tek) && (j < n))
 	{
 		dest[j] = src[j];
 		j++;
 	}
-	dest[n] = '0';
 	return (dest);
 }
