@@ -14,7 +14,14 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] >= 0 && s[i] <= 9)
-			*s = s[i];
+		{
+			if (s[i - 1] == '-')
+				*s = -s[i];
+			else if (s[i - 1] == '+')
+				*s = +s[i];
+			else
+				*s = s[i];
+		}	
 		else
 			break;
 		i++;
