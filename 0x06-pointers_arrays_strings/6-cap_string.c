@@ -12,9 +12,10 @@ char *cap_string(char *s)
 
 	while(s[t] != '\0')
 	{
-		s[0] = s[0] - 'a' + 'A';
-		if (s[t] == ' ')
-			s[t + 1]  = s[t +1] - 'a' + 'A';
+		if (s[t] == ' ' || ',' || ';' || '.' || '!' || '?')
+			s[t + 1]  = (s[t +1] - 'a' + 'A');
+		else
+			s[t] = s[t] - 'a' + 'A';
 		t++;
 	}
 	return (s);
