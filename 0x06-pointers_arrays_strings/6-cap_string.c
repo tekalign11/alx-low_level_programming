@@ -10,10 +10,10 @@ char *cap_string(char *s)
 {
 	int t = 0;
 
-	while(s[t] != '\0')
+	while (s[t] != '\0')
 	{
-		if (s[t] == ' ' || ',' || ';' || '.' || '!' || '?')
-			s[t + 1]  = (s[t +1] - 'a' + 'A');
+		if (s[t] == ' ')
+			s[t + 1]  = (s[t + 1] - 'a' + 'A');
 		else
 			s[t] = s[t] - 'a' + 'A';
 		t++;
