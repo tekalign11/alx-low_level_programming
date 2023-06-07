@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - Prints the diagonal of a square
@@ -19,7 +20,7 @@ void print_diagsums(int *a, int size)
 			{
 				m = m + (a[t * size + k]);
 			}
-			else if (t + k == sizie - 1)
+			else if (t + k == size - 1)
 				n = n + (a[t * size + k]);
 		}
 	printf("%d, %d\n", m, n);
