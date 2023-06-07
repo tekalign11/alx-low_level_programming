@@ -11,7 +11,7 @@ int _pow_recursion(int x, int y)
 {
 	int tek;
 
-	if ( y < 0)
+	if (y < 0)
 		tek = -1;
 	else if (y == 0)
 		tek = 1;
