@@ -7,6 +7,16 @@
 
 int is_prime_number(int n)
 {
-	int i = 1;
+	int i = 2;
+	int j = 2;
 
-	if (i % 
+	if (n = 2)
+		return (0);
+	else if ((n != j) && (n % j == 0))
+	{
+	 	is_prime_number(n);
+
+		return (1);
+	else
+	{
+			
