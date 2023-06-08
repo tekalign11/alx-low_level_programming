@@ -7,13 +7,13 @@
  */
 int _sqrt_recursion(int n)
 {
-	int k = 1 ;
+	int k = 1;
 
 	if (n < 0)
 		return (-1);
 	else if (n % k == 0 && k * k == n)
 	{
-		return _sqrt_recursion(n / k);
+		return (_sqrt_recursion(n / k));
 		k++;
 	}
 	else if (k % 1 != 0)
