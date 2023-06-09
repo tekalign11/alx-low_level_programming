@@ -6,5 +6,6 @@
 
 int _putchar(char c);
 void myfunc(int argc, char *argv[]);
+int main(int argc, char *argv[]);
 
 #endif
