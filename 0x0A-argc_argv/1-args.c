@@ -1,8 +1,9 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * main - prints the number of arguments passed
- * @argc - The number of arguments
+ * @argc: The number of arguments
  * @argv: The pointer to strings of arguments
  * Return: Always success
  */
@@ -14,6 +15,7 @@ int main(int argc, char *argv[])
 	{
 		i++;
 	}
-	argc = i;
-	return (argc);
+	argc = i - 1;
+	printf("%d\n", argc);
+	return (0);
 }
