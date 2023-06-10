@@ -27,21 +27,25 @@ int intargssum(int argc, char *argv[])
 
 	while (k < argc)
 	{
-		num = atoi(argv[k]);
-		sum  = sum + num;
+		if (!(*argv[k] >= 'a' && *argv[k] <= 'z'))
+		{
+			num = atoi(argv[k]);
+			sum  = sum + num;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 		k++;
 	}
-	if (num % 1 >= 0 && num % 1 < 10)
+	if (k == 1)
+	{
+		printf("0\n");
+	}
+	else
 	{
 		printf("%d\n", sum);
 	}
-	else if (k <= 1)
-		printf("0\n");
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
-
 	return (0);
 }

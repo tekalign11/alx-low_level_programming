@@ -13,5 +13,6 @@ void args_count(int argc, char *argv[]);
 void myargs_list(int argc, char *argv[]);
 int _argsmultiple(int argc, char *argv[]);
 int intargssum(int argc, char *argv[]);
+int needchange(int argc, char *argv[]);
 
 #endif
