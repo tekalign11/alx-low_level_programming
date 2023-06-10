@@ -9,12 +9,24 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
 
-	while (i < argc)
-	{
-		printf("%s\n", argv[i]);
-		i++;
-	}
+	myargs_list(argc, argv);
 	return (0);
+}
+
+/**
+ * myargs_list - prints the name of arguments passed
+ * @argc: The number of arguments
+ * @argv: Argument vector
+ */
+
+void myargs_list(int argc, char *argv[])
+{
+	int t = 0;
+
+	while (t < argc)
+	{
+		printf("%s\n", argv[t]);
+		t++;
+	}
 }
