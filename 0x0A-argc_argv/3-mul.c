@@ -17,8 +17,9 @@ int main(int argc, char *argv[])
  * _argsmultiple - multiplies two arguments
  * @argc: The number of arguments
  * @argv: Arguments vector
+ * Return: 0 if success else 1
  */
-void _argsmultiple(int argc, char *argv[])
+int _argsmultiple(int argc, char *argv[])
 {
 	int k = 1;
 	int multiple = 1;
@@ -33,5 +34,10 @@ void _argsmultiple(int argc, char *argv[])
 		printf("%d\n", multiple);
 	}
 	else
+	{
 		printf("Error\n");
+		return (1);
+	}
+	return (0);
+
 }
