@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 
 /**
@@ -7,13 +7,23 @@
  * @argv: Pointer to the arguments
  * Return: Always success
  */
+
 int main(int argc, char *argv[])
 {
 
-	if (argc >= 1)
+	myargs(argc, argv);
+	return (0);
+}
+/**
+ * myargs - prints the first argument or program name
+ * @argc: The number of arguments
+ * @argv: The name of arguments
+ */
+void myargs(int argc, char *argv[])
+{
+
+	if (argc > 0)
 	{
 		printf("%s\n", argv[0]);
 	}
-
-	return (0);
 }
