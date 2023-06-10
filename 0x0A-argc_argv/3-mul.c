@@ -29,7 +29,7 @@ int _argsmultiple(int argc, char *argv[])
 		multiple = multiple * atoi(argv[k]);
 		k++;
 	}
-	if (k >= 2)
+	if (k == 3)
 	{
 		printf("%d\n", multiple);
 	}
