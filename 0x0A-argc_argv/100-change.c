@@ -50,9 +50,9 @@ int needchange(int argc, char *argv[])
 				mod = num % coins[i];
 				num = mod;
 			}
+			change = res + num;
+			printf("%d\n", change);
 		}
 	}
-	change = res + num;
-	printf("%d\n", change);
 	return (0);
 }
