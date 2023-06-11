@@ -9,8 +9,8 @@
 int main(int argc, char *argv[])
 {
 
-        needchange(argc, argv);
-        return (0);
+	needchange(argc, argv);
+	return (0);
 }
 
 /**
@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
  */
 int needchange(int argc, char *argv[])
 {
-        int k = 0;
-        int sum = 0;
-        int num;
-	int l, m, n, o, p, q, r, s;
+	int k = 0;
+	int res = 0;
+	int num, mod, i;
+	int change;
 
-        while (k < argc)
-        {
-                k++;
+	while (k < argc)
+	{
+		k++;
 	}
 	if (k != 2)
 	{
@@ -36,13 +36,23 @@ int needchange(int argc, char *argv[])
 		return (1);
 	}
 	else
-		num = atoi(argv[1]);
-	if (num < 0)
-		printf("0\n");
-	else
 	{
-		int coins[] = {1, 5, 10, 25, 100};
-		for ( i = 0; i < 5; 
+		num = atoi(argv[1]);
+		if (num < 0)
+			printf("0\n");
+		else
+		{
+			int coins[] = {1, 2, 5, 10, 25};
 
-	return (sum);
+			for (i = 5; i > 0; i--)
+			{
+				res = res + num / coins[i];
+				mod = num % coins[i];
+				num = mod;
+			}
+		}
+	}
+	change = res + num;
+	printf("%d\n", change);
+	return (0);
 }
