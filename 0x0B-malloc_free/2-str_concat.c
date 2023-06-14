@@ -24,12 +24,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	concptr = malloc(i + k + 1);
 
-	/*if (concptr == NULL)
+	if (concptr == NULL)
 		return (NULL);
-	if (s1 == NULL)
-		return (s2);
-	if (s2 == NULL)
-		return (s1);*/
 	while (t < i)
 	{
 		concptr[t] = s1[t];
@@ -41,7 +37,10 @@ char *str_concat(char *s1, char *s2)
 		t++;
 		m++;
 	}
-
+	if (s1 == NULL)
+		concptr = s2;
+	if (s2 == NULL)
+		concptr = s1;
 	return (concptr);
 	free(concptr);
 }
