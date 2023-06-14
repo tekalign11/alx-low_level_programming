@@ -14,11 +14,11 @@ char *str_concat(char *s1, char *s2)
 	int m = 0;
 	char *concptr;
 
-	while (s1[i] != 0)
+	while (s1[i] != '\0')
 	{
 		i++;
 	}
-	while (s2[k] != 0)
+	while (s2[k] != '\0')
 	{
 		k++;
 	}
@@ -37,10 +37,6 @@ char *str_concat(char *s1, char *s2)
 		t++;
 		m++;
 	}
-	if (s1 == NULL)
-		concptr = s2;
-	if (s2 == NULL)
-		concptr = s1;
-	return (concptr);
 	free(concptr);
+	return (concptr);
 }
