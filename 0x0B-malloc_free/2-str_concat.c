@@ -37,6 +37,8 @@ char *str_concat(char *s1, char *s2)
 		t++;
 		m++;
 	}
+	if (concptr == NULL)
+		return (NULL);
 	return (concptr);
 	free(concptr);
 }
