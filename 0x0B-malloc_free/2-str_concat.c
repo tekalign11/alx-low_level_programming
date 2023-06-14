@@ -11,6 +11,8 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int t = 0;
 	int k = 0;
+	int m = 0;
+	char *concptr;
 
 	while (s1[i] != 0)
 	{
@@ -20,16 +22,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		k++;
 	}
-	s1 = malloc(i + k + 1);
+	concptr = malloc(i + k + 1);
 
-	if (s1 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	while (t <= (k))
+	while (t < i)
 	{
-		s1[i + 1] = s2[t];
+		concptr[t] = s1[t];
 		t++;
-		i++;
 	}
-	return (s1);
-	free(s1);
+	while (m < k)
+	{
+		concptr[t] = s2[m];
+		t++;
+		m++;
+	}
+	return (concptr);
+	free(concptr);
 }
