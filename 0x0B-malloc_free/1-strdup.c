@@ -19,8 +19,6 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	if (i == 0)
-		return (NULL);
 	dupstr = malloc(i + 1);
 
 	if (dupstr == NULL)
