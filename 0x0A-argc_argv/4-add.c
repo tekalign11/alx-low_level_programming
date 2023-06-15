@@ -27,7 +27,7 @@ int intargssum(int argc, char *argv[])
 
 	while (k < argc)
 	{
-		if (*argv[k] % 1 != *argv[k])
+		if (*argv[k] >= 'a' && *argv[k] <= 'z')
 		{
 			printf("Error\n");
 			return (1);
