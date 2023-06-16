@@ -22,9 +22,9 @@ int main(int argc, char *argv[])
 int needchange(int argc, char *argv[])
 {
 	int k = 0;
-	long long int res = 0;
+	long int res = 0;
 	int i;
-	long long int num, mod, change;
+	long int num, mod, change;
 
 	while (k < argc)
 	{
@@ -51,7 +51,7 @@ int needchange(int argc, char *argv[])
 				num = mod;
 			}
 			change = res + num;
-			printf("%lld\n", change);
+			printf("%ld\n", change);
 		}
 	}
 	return (0);
