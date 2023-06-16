@@ -42,7 +42,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n < k)
 	{
-		concstr[n + i] = '\0';
+		if (n == 0)
+			concstr[i] = '\0';
+		else
+			concstr[n + i] = '\0';
 	}
 	else
 	{
