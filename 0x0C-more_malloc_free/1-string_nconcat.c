@@ -44,10 +44,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		concstr[n + i] = '\0';
 	}
-	/*else
+	else
 	{
 		concstr[t] = '\0';
-	}*/
+	}
 	return (concstr);
 	free(concstr);
 }
