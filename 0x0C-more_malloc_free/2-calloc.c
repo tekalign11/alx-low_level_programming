@@ -14,11 +14,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	narray = malloc(nmemb * size + 1);
+
+	narray = malloc(nmemb * size);
 
 	if (narray == NULL)
 		return (NULL);
 	for (a = 0; a < nmemb; a++)
 		*((char *)narray + a * size) =  0;
 	return (narray);
+	free(narray);
 }
