@@ -44,7 +44,7 @@ int needchange(int argc, char *argv[])
 		{
 			int coins[] = {1, 2, 5, 10, 25};
 
-			for (i = 5; i > 0; i--)
+			for (i = 4; i >= 0; i--)
 			{
 				res = res + num / coins[i];
 				mod = num % coins[i];
