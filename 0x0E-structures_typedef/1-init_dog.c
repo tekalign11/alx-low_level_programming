@@ -1,17 +1,4 @@
-#include <stdio.h>
-/**
- * struct dog - creates a new struct variable dog
- * @name: The name of the dog
- * @age: The age of the dog
- * @owner: The owner of the dog
- */
-
-struct dog
-{
-        char *name;
-        float age;
-        char *owner;
-};
+#include "dog.h"
 
 /**
  * init_dog - initializes the struct dog
@@ -30,12 +17,4 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	other_dog.owner = "Abebe";
 
 	*d = other_dog;
-}
-int main(void)
-{
-    struct dog my_dog;
-
-    init_dog(&my_dog, "Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
 }
