@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main: Program entry point
+ * main - Program entry point
  * Description: Prints file name using predifined macro
  * Return: Always success
  */
