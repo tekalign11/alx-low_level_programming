@@ -9,7 +9,6 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int a = 0;
 	unsigned int x;
 	int *narray;
 
@@ -18,8 +17,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	narray = malloc(nmemb * size);
 
-	while (narray[a] != '\0')
-		*narray = 0;
+	while (*narray != '\0')
+		return (0);
 	if (narray == NULL)
 		return (NULL);
 	narray = malloc(nmemb * size);
