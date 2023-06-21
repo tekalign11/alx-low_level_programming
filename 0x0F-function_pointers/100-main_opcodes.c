@@ -9,25 +9,25 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int t;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 	int totalbytes = atoi(argv[1]);
 
 	if (totalbytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 	unsigned char *tptr = (unsigned char *)&main;
 
-	for (i = 0; i < totalbytes; i++)
+	for (t = 0; t < totalbytes; t++)
 	{
-		printf("%02x ", tptr[i]);
+		printf("%02x ", tptr[t]);
 	}
 	printf("\n");
 	return (0);
