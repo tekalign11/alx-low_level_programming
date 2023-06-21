@@ -11,6 +11,8 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	unsigned int k = 0;
 	int t;
 
+	if (array == NULL)
+		return;
 	while (k < size)
 	{
 		t = array[k];
