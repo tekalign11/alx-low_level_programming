@@ -9,6 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -23,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 	unsigned char *tptr = (unsigned char *)&main;
 
-	for (int i = 0; i < totalbytes; i++)
+	for (i = 0; i < totalbytes; i++)
 	{
 		printf("%02x ", tptr[i]);
 	}
