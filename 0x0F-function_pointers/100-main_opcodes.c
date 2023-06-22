@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	unsigned char *tptr = (unsigned char *)&main;
+	unsigned char *totalptr = (unsigned char *)&main;
 
 	for (t = 0; t < totalbytes; t++)
 	{
-		printf("%02x ", tptr[t]);
+		printf("%02x ", totalptr[t]);
 	}
 	printf("\n");
 	return (0);
