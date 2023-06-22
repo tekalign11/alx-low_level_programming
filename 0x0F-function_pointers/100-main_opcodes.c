@@ -16,6 +16,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+	if (argv == NULL)
+	{
+		printf("Error\n");
+		exit(1);
+	}
 	int totalbytes = atoi(argv[1]);
 
 	if (totalbytes < 0)
