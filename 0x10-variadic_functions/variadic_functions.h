@@ -1,6 +1,9 @@
 #ifndef VARDIAC_FUNCTIONS_H
 #define VARDIAC_FUNCTIONS_H
-
+#include <stdio.h>
+#include <stddef.h>
+#include <string.h>
+#include <stdlib.h>
 #include <stdarg.h>
 
 int _putchar(char c);
