@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	if (argv == NULL)
 	{
 		printf("Error\n");
-		exit(1);
 	}
 	int totalbytes = atoi(argv[1]);
 
