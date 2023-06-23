@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		m = va_arg(teka, char *);
 		if (m == NULL)
-			printf("nil");
+			printf("(nil)");
 		else
 			printf("%s", m);
 		if (t < n - 1)
