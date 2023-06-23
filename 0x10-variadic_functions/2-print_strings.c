@@ -14,8 +14,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(teka, n);
 
-	if (separator == NULL)
-		return;
 	for (t = 0; t < n; t++)
 	{
 		m = va_arg(teka, char *);
@@ -24,7 +22,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", m);
 		if (t < n - 1)
-			printf("%s", separator);
+		{
+			if (separator != NULL)
+				printf("%s", separator);
+		}
 	}
 	printf("\n");
 }
