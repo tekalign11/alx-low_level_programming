@@ -10,13 +10,11 @@ int main(void)
 {
 	long int n1 = 1, n2 = 2;
 	long int i, n3;
-	long int sum;
+	long int sum = 2;
 
-	for (i = 3; i < 100; i++)
+	for (i = 3; (n3 = n1 + n2)  < 4000000; i++)
 	{
-		sum = n2;
-		n3 = n1 + n2;
-		if ((n3 % 2 == 0) && (n3 < 4000000))
+		if (n3 % 2 == 0)
 		{
 			sum += n3;
 		}
