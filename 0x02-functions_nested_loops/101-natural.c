@@ -13,11 +13,12 @@ int main(void)
 
 	for (t = 3; t < 1024; t += 3)
 	{
-		sum1 =  sum1 + t;
+		sum1 += t;
 	}
 	for (a = 5; a < 1024; a += 5)
 	{
-		sum2 = sum2 + a;
+		if (a % 3 != 0)
+			sum2 += a;
 	}
 
 	printf("%d\n", sum1 + sum2);
