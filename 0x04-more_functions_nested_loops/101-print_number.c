@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	int div = 1;
+	long int div = 1;
 
 	if (n == 0)
 		_putchar('0');
