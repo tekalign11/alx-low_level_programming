@@ -8,10 +8,9 @@
 
 size_t print_listint(const listint_t *h)
 {
-	unsigned int t = 0;
-	const listint_t *ptr = NULL;
+	size_t t = 0;
+	const listint_t *ptr = h;
 
-	ptr = h;
 	if (ptr == NULL)
 	{
 		return (0);
