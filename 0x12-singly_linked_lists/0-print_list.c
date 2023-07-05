@@ -10,7 +10,9 @@ size_t print_list(const list_t *h)
 {
 	int t = 0;
 
-	struct list_t
+	while (h != NULL)
+	{
+		printf(
 	{
 		if (h != NULL)
 	{
