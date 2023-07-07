@@ -8,6 +8,8 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int m;
+	char s[64];
+	int t = 0;
 
 	if (n == 0)
 		_putchar('0');
@@ -15,9 +17,15 @@ void print_binary(unsigned long int n)
 	{
 		m = ((n >> 1));
 		if ((m * 2) == n)
-			_putchar('0');
+			s[t] = '0';
 		else
-			_putchar('1');
+			s[t] = '1';
 		n = m;
+		t++;
+	}
+	while (t > 0)
+	{
+		t--;
+		_putchar(s[t]);
 	}
 }
