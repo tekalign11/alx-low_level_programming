@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 		m = ((n >> 1));
 		if ((m * 2) == n)
 		{
-			_putchar('0';)
+			_putchar('0');
 		}
 		else
 		{
@@ -25,3 +25,4 @@ void print_binary(unsigned long int n)
 		}
 		n = m;
 	}
+}
