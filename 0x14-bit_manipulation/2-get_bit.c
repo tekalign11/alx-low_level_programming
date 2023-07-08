@@ -28,7 +28,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		k++;
 	}
 	if (index >= k)
-		return (-1);
+		return (0);
 	while (k > 0)
 	{
 		k--;
