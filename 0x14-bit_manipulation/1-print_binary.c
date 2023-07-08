@@ -10,19 +10,10 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int m;
 
-	if (n == 0)
-		_putchar('0');
-	while (n > 0)
+	if (n > 1)
 	{
-		m = ((n >> 1));
-		if ((m * 2) == n)
-		{
-			_putchar('0');
-		}
-		else
-		{
-			_putchar('1');
-		}
-		n = m;
+		print_binary(n >> 1);
 	}
+	m = (n & 1);
+	_putchar(m + '0');
 }
