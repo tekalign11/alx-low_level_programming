@@ -30,7 +30,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (index >= k)
 		return (0);
-	if ((n >= ULONG_MAX) || (index >= (sizeof(unsigned long int) * 8)))
+	if (n >= ULONG_MAX)
 		return (-1);
 	while (k > 0)
 	{
