@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * get_bit - gets the bit at the index
@@ -29,7 +30,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (index >= k)
 		return (0);
-	if (index >= (sizeof(unsigned long int) * 8))
+	if ((n >= ULONG_MAX) || (index >= (sizeof(unsigned long int) * 8)))
 		return (-1);
 	while (k > 0)
 	{
