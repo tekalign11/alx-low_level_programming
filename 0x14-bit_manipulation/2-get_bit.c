@@ -9,8 +9,8 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int m;
-	char s[32];
-	char z[32];
+	int s[32];
+	int z[32];
 	unsigned int t = 0, k = 0;
 
 	if (n == 0)
@@ -20,20 +20,20 @@ int get_bit(unsigned long int n, unsigned int index)
 		m = (n >> 1);
 		if (m * 2 == 0)
 		{
-			s[k] = '0';
+			s[k] = 0;
 		}
 		else
-			s[k] = '1';
+			s[k] = 1;
 		n = m;
 		k++;
 	}
 	if (index >= k)
-		return (0);
+		return (-1);
 	while (k > 0)
 	{
 		k--;
 		z[t] = s[k];
 		t++;
 	}
-	return (z[index] - '0');
+	return (z[index]);
 }
