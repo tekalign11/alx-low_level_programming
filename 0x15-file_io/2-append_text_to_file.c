@@ -13,6 +13,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	ssize_t app;
 	int t_len = 0;
 
+	if (filename == NULL)
+		return (-1);
 	descriptor = open(filename, O_WRONLY | O_APPEND);
 	if (descriptor < 0)
 	{
