@@ -11,10 +11,10 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int descriptor;
 	ssize_t app;
-	int t_len;
+	int t_len = 0;
 
 	descriptor = open(filename, O_WRONLY | O_APPEND);
-	if (filename == NULL)
+	if (descriptor < 0)
 	{
 		close(descriptor);
 		return (-1);
