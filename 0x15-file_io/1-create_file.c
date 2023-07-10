@@ -10,7 +10,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int descriptor;
-	ssize_t w;
+	ssize_t bizat;
 	int t_len = 0;
 
 	if (text_content != NULL)
@@ -21,15 +21,15 @@ int create_file(const char *filename, char *text_content)
 		}
 	}
 
-	descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (descriptor < 0)
 	{
 		close(descriptor);
 		return (-1);
 	}
-	w = write(descriptor, text_content, t_len);
-	if (w < 0)
+	bizat = write(descriptor, text_content, t_len);
+	if (bizat < 0)
 	{
 		close(descriptor);
 		return (-1);
