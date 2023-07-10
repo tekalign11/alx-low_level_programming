@@ -29,7 +29,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			t_len++;
 		}
 	}
-	app = write(descriptor, text_content, t_len);
+	app = write(descriptor, text_content, t_len + 1);
 	if (app < 0)
 	{
 		close(descriptor);
