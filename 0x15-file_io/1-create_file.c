@@ -13,10 +13,12 @@ int create_file(const char *filename, char *text_content)
 	ssize_t w;
 	int t_len = 0;
 
-	while (*text_content != '\0')
+	if (text_content != NULL)
 	{
-		t_len++;
-		text_content++;
+		while (text_content[t_len])
+		{
+			t_len++;
+		}
 	}
 
 	descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0644);
@@ -26,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 		close(descriptor);
 		return (-1);
 	}
-	w = write(descriptor, text_content, t_len - 1);
+	w = write(descriptor, text_content, t_len);
 	if (w < 0)
 	{
 		close(descriptor);
