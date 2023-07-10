@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 		close(descriptor);
 		return (-1);
 	}
-	w = write(descriptor, text_content, t_len + 1);
+	w = write(descriptor, text_content, t_len - 1);
 	if (w < 0)
 	{
 		close(descriptor);
