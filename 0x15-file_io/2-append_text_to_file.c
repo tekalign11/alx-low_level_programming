@@ -11,14 +11,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	ssize_t app;
 	int t_len = 0;
 
-	if (filename == NULL)
+	if (filename == NULL || text_content == NULL)
 		return (-1);
 	descriptor = open(filename, O_WRONLY | O_APPEND);
-	if (descriptor < 0)
-	{
-		return (-1);
-	}
-	if (text_content == NULL)
+	if (descriptor == -1)
 	{
 		return (-1);
 	}
@@ -29,8 +25,8 @@ int append_text_to_file(const char *filename, char *text_content)
 			t_len++;
 		}
 	}
-	app = write(descriptor, text_content, t_len + 1);
-	if (app < 0)
+	app = write(descriptor, text_content, t_len);
+	if (app == -1)
 	{
 		close(descriptor);
 		return (-1);
