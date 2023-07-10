@@ -14,7 +14,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	int t_len;
 
 	descriptor = open(filename, O_WRONLY | O_APPEND);
-	if (descriptor < 0)
+	if (filename == NULL)
 	{
 		close(descriptor);
 		return (-1);
