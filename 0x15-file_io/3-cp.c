@@ -4,10 +4,9 @@
  * copy_content - copies contentes from one file to another
  * @src_file: source file
  * @dest_file: destination file
- * Return: 1 on success
  */
 
-int copy_content(const char *src_file, const char *dest_file)
+void copy_content(const char *src_file, const char *dest_file)
 {
 	int sfd, dfd, cfd;
 	char buffer[1024];
@@ -56,7 +55,6 @@ int copy_content(const char *src_file, const char *dest_file)
 int main(int argc, char *argv[])
 {
 	char *file_from, *file_to;
-	int m;
 
 	if (argc != 3)
 	{
@@ -65,7 +63,6 @@ int main(int argc, char *argv[])
 	}
 	file_from = argv[1];
 	file_to = argv[2];
-	m = copy_content(file_from, file_to);
-	printf("%d\n", m);
+	copy_content(file_from, file_to);
 	return (0);
 }
