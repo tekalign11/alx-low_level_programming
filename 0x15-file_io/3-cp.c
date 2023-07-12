@@ -10,7 +10,6 @@ void copy_content(const char *src_file, const char *dest_file)
 {
 	int sfd, dfd, cfd;
 	char buffer[1024];
-	size_t f_len = 0;
 	ssize_t cb;
 
 	sfd = open(src_file, O_RDONLY);
@@ -19,23 +18,26 @@ void copy_content(const char *src_file, const char *dest_file)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
 		exit(98);
 	}
-	if (src_file != NULL)
+	/*if (src_file != NULL)
 	{
 		while (src_file[f_len])
 		{
 			f_len++;
 		}
-	}
+	}*/
 	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC | 0664);
 	if (dfd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
 		exit(99);
 	}
-	cb = read(sfd, buffer, f_len);
-	if (cb != 0)
+	while ((cb = read(sfd, buffer, sizeof(buffer))) > 0)
 	{
-		dprintf(dfd, buffer, f_len);
+		if (write(dfd, buffer, cb) != cb)
+		{
+			dprintf(STDERR_FILENO, "Error: Write error\n");
+			exit(100);
+		}
 	}
 	close(dfd);
 	cfd = close(sfd);
