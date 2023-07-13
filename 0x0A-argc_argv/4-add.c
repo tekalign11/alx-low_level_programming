@@ -1,41 +1,50 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
- * main - Entry point
- * @argc: The number of arguments
- * @argv: Argument vector
- * Return: Always success (0)
+ * arg_check - checks if a digit in the number
+ * @m: the string passed
+ * Return: 0 the string is num else 1
  */
-int main(int argc, char *argv[])
+int arg_check(char *m)
 {
 
-	intargssum(argc, argv);
-	return (0);
+	while (*m != '\0')
+	{
+		if (!isdigit(*m))
+		{
+			return (0);
+		}
+		m++;
+	}
+	return (1);
 }
 
 /**
- * intargssum - multiplies two arguments
+ * main - adds the args if they are numbers
  * @argc: The number of arguments
  * @argv: Arguments vector
  * Return: 0 if success else 1
  */
-int intargssum(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int k = 1;
 	int sum = 0;
 	int num;
+	char *t;
 
 	while (k < argc)
 	{
-		if (*argv[k] >= 'a' && *argv[k] <= 'z')
+		t = argv[k];
+		if (arg_check(t))
 		{
-			printf("Error\n");
-			return (1);
+			num = atoi(t);
+			sum  += num;
 		}
 		else
 		{
-			num = atoi(argv[k]);
-			sum  = sum + num;
+			printf("Error\n");
+			return (1);
 		}
 		k++;
 	}
