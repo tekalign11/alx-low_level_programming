@@ -9,7 +9,7 @@
 void copy_content(const char *src_file, const char *dest_file)
 {
 	int sfd, dfd, cfd;
-	char buffer[1024];
+	char buffer[3000];
 	ssize_t cb;
 
 	sfd = open(src_file, O_RDONLY);
