@@ -18,6 +18,7 @@ void copy_content(int sfd, int dfd)
 			b_written = write(dfd, buffer + written, cb - written);
 			if (b_written == -1)
 			{
+				dprintf(STDERR_FILENO, "Error: Can't write to %d\n", dfd);
 				close(sfd);
 				close(dfd);
 			}
