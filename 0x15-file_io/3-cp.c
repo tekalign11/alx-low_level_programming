@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	file_to = argv[2];
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]);
+		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", file_from, file_to);
 		exit(97);
 	}
 	copy_content(file_from, file_to);
