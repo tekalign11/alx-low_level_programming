@@ -12,23 +12,20 @@ void copy_content(char *src_file, char *dest_file)
 	ssize_t written = 0;
 
 	sfd = open(src_file, O_RDONLY);
-	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (dfd == -1 || sfd == -1)
+	cb = read(sfd, buffer, sizeof(buffer));
+	if (sfd == -1 || cb == -1)
 	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
 		exit(98);
 	}
-	while ((cb = read(sfd, buffer, sizeof(buffer))) > 0)
+	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	while (cb > 0)
 	{
 		while (written < cb)
 		{
 			b_written = write(dfd, buffer + written, cb - written);
 			written += b_written;
 		}
-	}
-	if (cb == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
-		exit(98);
 	}
 	if (b_written == -1)
 	{
