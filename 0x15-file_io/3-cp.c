@@ -13,6 +13,10 @@ void copy_content(char *src_file, char *dest_file)
 
 	sfd = open(src_file, O_RDONLY);
 	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (dfd == -1 || sfd == -1)
+	{
+		exit(98);
+	}
 	while ((cb = read(sfd, buffer, sizeof(buffer))) > 0)
 	{
 		while (written < cb)
@@ -31,7 +35,6 @@ void copy_content(char *src_file, char *dest_file)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
 		exit(99);
 	}
-
 	close(dfd);
 	cfd = close(sfd);
 	if (cfd == -1)
