@@ -16,15 +16,15 @@ void copy_content(int sfd, int dfd)
 		while (written < cb)
 		{
 			b_written = write(dfd, buffer + written, cb - written);
-			if (b_written == -1)
-			{
-				dprintf(STDERR_FILENO, "Error: Can't write to %d\n", dfd);
-				close(sfd);
-				close(dfd);
-			}
 			written += b_written;
 		}
 	}
+	if (b_written == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", dfd);
+		exit(99);
+	}
+
 	close(dfd);
 	cfd = close(sfd);
 	if (cfd == -1)
