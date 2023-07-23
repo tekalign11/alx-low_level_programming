@@ -1,29 +1,16 @@
 #include "main.h"
 /**
  * copy_content - copies contentes from one file to another
- * @src_file: source file
- * @dest_file: destination file
+ * @sfd: source file descripter
+ * @dfd: destination file descriptor
  */
-void copy_content(const char *src_file, const char *dest_file)
+void copy_content(int sfd, int dfd)
 {
-	int sfd, dfd, cfd;
+	int cfd;
 	char buffer[4096];
 	ssize_t cb, b_written;
 	ssize_t written = 0;
 
-	sfd = open(src_file, O_RDONLY);
-	if (sfd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
-		exit(98);
-	}
-	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (dfd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
-		close(sfd);
-		exit(99);
-	}
 	while ((cb = read(sfd, buffer, sizeof(buffer))) > 0)
 	{
 		while (written < cb)
@@ -54,15 +41,31 @@ void copy_content(const char *src_file, const char *dest_file)
  */
 int main(int argc, char *argv[])
 {
-	char *file_from, *file_to;
+	char *src_file, *dest_file;
+	int sfd, dfd;
 
-	file_from = argv[1];
-	file_to = argv[2];
+	src_file = argv[1];
+	dest_file = argv[2];
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	copy_content(file_from, file_to);
+	sfd = open(src_file, O_RDONLY);
+	if (sfd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
+		exit(98);
+	}
+	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (dfd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
+		close(sfd);
+		exit(99);
+	}
+	copy_content(sfd, dfd);
+	close(sfd);
+	close(dfd);
 	return (0);
 }
