@@ -1,16 +1,15 @@
 #include "main.h"
-
 /**
  * copy_content - copies contentes from one file to another
  * @src_file: source file
  * @dest_file: destination file
  */
-
 void copy_content(const char *src_file, const char *dest_file)
 {
 	int sfd, dfd, cfd;
-	char buffer[3000];
-	ssize_t cb;
+	char buffer[4096];
+	ssize_t cb, b_written;
+	ssize_t written = 0;
 
 	sfd = open(src_file, O_RDONLY);
 	if (sfd == -1)
@@ -22,21 +21,27 @@ void copy_content(const char *src_file, const char *dest_file)
 	if (dfd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
+		close(sfd);
 		exit(99);
 	}
 	while ((cb = read(sfd, buffer, sizeof(buffer))) > 0)
 	{
-		if (write(dfd, buffer, cb) != cb)
+		while (written < cb)
 		{
-			dprintf(STDERR_FILENO, "Error: Write error\n");
-			exit(100);
+			b_written = write(dfd, buffer + written, cb - written);
+			if (b_written == -1)
+			{
+				close(sfd);
+				close(dfd);
+			}
+			written += b_written;
 		}
 	}
 	close(dfd);
 	cfd = close(sfd);
 	if (cfd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd");
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cfd);
 		exit(100);
 	}
 }
