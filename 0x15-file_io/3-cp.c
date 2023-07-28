@@ -15,34 +15,36 @@ void copy_content(char *src_file, char *dest_file)
 	if (sfd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
-		exit(98);
-	}
+		exit(98); }
 	dfd = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (dfd == -1)
 	{
-		exit(98);
-	}
-
+		exit(98); }
 	while ((cb = read(sfd, buffer, sizeof(buffer))) > 0)
 	{
 		while (written < cb)
 		{
 			b_written = write(dfd, buffer + written, cb - written);
-			written += b_written;
-		}
+			if (b_written == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
+				close(dfd);
+				close(sfd);
+				exit(99); }
+			written += b_written; }
 	}
-	if (b_written == -1)
+	if (cb == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest_file);
-		exit(99);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
+		close(dfd);
+		close(sfd);
+		exit(99); }
 	close(dfd);
 	cfd = close(sfd);
 	if (cfd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cfd);
-		exit(100);
-	}
+		exit(100); }
 }
 
 /**
